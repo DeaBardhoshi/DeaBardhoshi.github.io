@@ -83,19 +83,20 @@ There are some interesting findings (at least to me :) ) . There are quite a few
 When labelling the data, I classified each person into a few broad categories depending on their Wikipedia page. It turns out there are 62 unique occupations among the street names! Here is a bar plot of the top 20 and their respective counts:
 
 
-![Top 20 Occupations (Image by Author)](/images/counts.png)
+![Top 20 Occupations (Image by Author)](/images/top20.png)
 
 Note the prominence of politicians, fighters and writers: these 3 categories together make up approximately 40 percent of all labelled street names in the data. Artists follow suit, rounding out the rest of the top 10. I made the choice to label partisan figures (8% of labelled total) separately from the rest of fighters, because of their direct associations with the period of the Communist regime in Albania (1946–1991) and the propaganda they were made a part of during this time. Therefore, I believe this deserves its own consideration as part of a broader conversation on how we reckon with our history as a country.
 
 Let’s take a better look into the **top 3 categories**: politicians, writers and fighters. Specifically, what are the historical periods they lived and worked in? Here is a distribution of the birth and death years, as well as the mean values for both of them:
 
-Image by author
+![(Image by Author)](/images/politicians.png)
 
 
-Image by author
+![(Image by Author)](/images/writers.png)
 
 
-Image by author
+![(Image by Author)](/images/fighters.png)
+
 
 - **Mean birth year**: Politicians (1882), Writers (1858), Fighters (1853)
 - **Mean death year**: Politicians (1936), Writers (1925), Fighters (1900)
@@ -107,7 +108,7 @@ There are some interesting patterns to be noticed in the graphs and the average 
 Last time, we looked at how women-named streets made up approximately 3% of the total names, but let’s take a look at these streets in their historical context and occupation as well. Filtering by gender and taking a look at the same birth/death distributions:
 
 
-Image by Author
+![(Image by Author)](/images/womenhist.png)
 
 - **Median birth year:** 1912
 - **Median death year:** 1949
@@ -118,17 +119,14 @@ Here, there are some interesting patterns too: first, I chose to take the median
 
 Let’s take a look at how all of this looks from a geography perspective. Here are three maps for each of the top 3 categories:
 
-Image by Author
-
-Image by Author
-
-
-Image by Author
+![(Image by Author)](/images/pmap.png)
+![(Image by Author)](/images/fmap.png)
+![(Image by Author)](/images/wmap.png)
 
 I would say I can’t pick out any immediate patterns just by looking at the data. To start to see if there are any, here is also a look into the most common occupations in each of Tirana’s 14 administrative areas (the polygon data for the administrative areas which is merged with the street names also comes from OpenStreetMaps):
 
 
-Image by Author
+![(Image by Author)](/images/adminprof.png)
 
 Not surprisingly, politicians and writers still feature prominently: what I think might merit more thinking is how certain areas have religious or partisan figures as their most common occupations. This might point at particular figures originating from those neighborhoods as a form of local representation, or other interesting patterns to look into.
 
