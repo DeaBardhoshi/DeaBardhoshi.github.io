@@ -18,10 +18,6 @@ So, let’s get started!
 
 Here is a peek at how the data from Open Street Map was provided, with a specified set of coordinates to cover the entire area of Tirana:
 
-![Image by Author](/images/counts.png)
-
-
-
 The data contains 26950 rows, most with a geometry and other associated road type attributes. Interestingly, the same street showed up multiple times in the data, presumably with different sections of a street being mapped at one time. Since the data did not contain a variable classifying names according to their gender, and there is no straightforward way of matching names in Albanian to a particular gender using code, I used my own knowledge of the language to hand-label about half of the dataframe’s rows. The column contained one of the following labels:
 
 - **W** = women names
@@ -30,7 +26,7 @@ The data contains 26950 rows, most with a geometry and other associated road typ
 
 Here is a look at the counts for each gender:
 
-Image by Author
+![Image by Author](/images/counts.png)
 
 As you can see, women street names make up about 3.3% of the total street names in Tirana, with men names comprising about 71% of the names. This situation is not unique to Albania: [2% of Paris’ streets are named after women](https://www.fodors.com/world/europe/france/experiences/news/why-are-all-the-streets-in-france-named-after-men) and in [Rome the number is 3.5%](https://www.bloomberg.com/news/articles/2015-11-04/mapping-the-sexism-of-street-names-in-major-cities). In these major cities, part of the reason is that city councils which make these decisions historically tended to be overwhelmingly male and white. Indeed, only an average of [36% of local government members across the world are women](https://www.unwomen.org/sites/default/files/2022-01/Womens-representation-in-local-government-en.pdf), with many countries falling significantly short of even this value: for instance only about 25 countries have a 40% women representation in local governments. That being said, the most recent Tirana city council legislature has a 50–50 men to women percentage, which is a step in the right direction.
 
@@ -44,12 +40,12 @@ It is interesting to note that there are so many “residential” streets. Acco
 
 Let’s take a look at the total lengths of all streets grouped by gender. To do this, I projected the linestring geometries to a projected coordinate system that used meters and averaged their length by gender:
 
-Image by Author
+![Image by Author](/images/lengthsg.png)
 
 Interestingly, “Other” streets are the longest on average, and streets named after women are slightly shorter than those named after men. It also appears that “Other” streets are found in highways or peripheral streets that are away from the urban core of Tirana:
 
 
-Image by Author
+![Image by Author](/images/otherst.png)
 
 This can be explained by the fact that highways or other inter-city streets had names such as “Tirane-Durres” signifying the two urban centers they were connecting or simply highway codes such as “SH1”. Given that, I labelled these streets as “Other”.
 
@@ -67,13 +63,18 @@ My categories were (broadly):
 
 - **Art, Teacher/Writer/Researcher, Politics, Humanitarian and Religious and War** (for some context, many of these women fought alongside men in WWII and they represent the majority of women belonging to the “War” category):
 
-Image by Author
+![Image by Author](/images/womenprof.png)
 
 ## **Neighborhoods**
 
 In addition to fields of contribution, are there any patterns in how the street names are divided by neighborhood? Tirana has 14 administrative areas dividing the city into distinct zones. Using a GeoJSON file from OpenStreetMaps that shows the polygons of each of these areas, we can perform a spatial join of this dataset with that of the street names. Here is a map of the 14 areas:
 
+![Image by Author](/images/areas.png)
+
 I’m interested to see what proportion of the street names in each administrative area are women:
+
+![Image by Author](/images/areastable.png)
+
 
 There are some interesting findings (at least to me :) ) . There are quite a few discrepancies in the proportions of women’s names, with areas like no. 4 having almost 10% of streets named after women and no. 8 having 0.08%. On the other hand, two of the areas (12, 14) had no streets named after women. Again, it would be interesting to look into the decision-making processes behind these naming choices.
 
@@ -81,7 +82,8 @@ There are some interesting findings (at least to me :) ) . There are quite a few
 
 When labelling the data, I classified each person into a few broad categories depending on their Wikipedia page. It turns out there are 62 unique occupations among the street names! Here is a bar plot of the top 20 and their respective counts:
 
-Top 20 Occupations (Image by Author)
+
+![Top 20 Occupations (Image by Author)](/images/counts.png)
 
 Note the prominence of politicians, fighters and writers: these 3 categories together make up approximately 40 percent of all labelled street names in the data. Artists follow suit, rounding out the rest of the top 10. I made the choice to label partisan figures (8% of labelled total) separately from the rest of fighters, because of their direct associations with the period of the Communist regime in Albania (1946–1991) and the propaganda they were made a part of during this time. Therefore, I believe this deserves its own consideration as part of a broader conversation on how we reckon with our history as a country.
 
