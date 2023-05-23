@@ -18,9 +18,9 @@ So, let’s get started!
 
 Here is a peek at how the data from Open Street Map was provided, with a specified set of coordinates to cover the entire area of Tirana:
 
-![https://miro.medium.com/v2/resize:fit:1400/1*g8i6W5StcIB-GXxrG3-FWw.png](https://miro.medium.com/v2/resize:fit:1400/1*g8i6W5StcIB-GXxrG3-FWw.png)
+![Image by Author](images/counts.png)
 
-Image by Author
+
 
 The data contains 26950 rows, most with a geometry and other associated road type attributes. Interestingly, the same street showed up multiple times in the data, presumably with different sections of a street being mapped at one time. Since the data did not contain a variable classifying names according to their gender, and there is no straightforward way of matching names in Albanian to a particular gender using code, I used my own knowledge of the language to hand-label about half of the dataframe’s rows. The column contained one of the following labels:
 
