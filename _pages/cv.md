@@ -15,24 +15,31 @@ Education
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* August 2022-May 2023: Undergraduate Student Instructor
+  * University of California, Berkeley
+  * Duties included: 
+  * Supervisor: Ani Adhikari, Ramesh Sridharan
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* August 2022-May 2023: Research Assistant
+  * University of California, Berkeley
+  * Duties included: 
+  * Supervisor: Ari Edmundson
+
+* May 2022 - August 2022:
+  * HP Inc.
+  * Duties included: 
+  * Supervisor: Pushon Mukherjee
+
+* August 2022-May 2023: Research Assistant
+  * University of California, San Francisco
+  * Duties included: 
+  * Supervisor: Vivek Rudrapatna
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Data Analysis
+* Data Engineering
+* Machine Learning
   
 Teaching
 ======
