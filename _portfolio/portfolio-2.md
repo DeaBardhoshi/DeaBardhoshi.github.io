@@ -57,7 +57,7 @@ At each moment, we can be in any of these 4 states, and the chance we are in **
 
 In this particular case study, however, it is very likely that our areas exhibit a degree of spatial dependence. For instance, if one area is very densely populated, it’s likely that the areas around it are also densely populated. To account for this, we focus on **Spatial Markov Models.** These models require that we compute a weight matrix **W** that describes this spatial dependence. First, though, let’s use Moran’s I to check if the neighborhoods are indeed spatially dependent:
 
-![Moran’s I (image by author)](/images/moran.png)]
+![Moran’s I (image by author)](/images/moran.png)
 
 
 
@@ -71,7 +71,7 @@ The W matrix is 22 by 22 matrix, with 1s for each value (i, j) where the ith row
 
 Note that we will obtain 4 separate matrices: one for each bin a polygon’s neighbor can be in. Here is a look at the results:
 
-![Spatial Markov Model Matrices (image by author)](/images/spatialm.png)]
+![Spatial Markov Model Matrices (image by author)](/images/spatialm.png)
 
 There are some interesting patterns:
 
@@ -109,13 +109,13 @@ When it comes to resilient development, cities should work towards providing hig
 
 In this context, I want to explore the distribution of schools as a marker of spatial equity. Are all children throughout Tirana served with accessible, high-quality schools? Are there areas that are disadvantaged? What are some school trends and patterns? For this, I’ll be using data for Tirana’s middle and primary schools (together known as “9-vjecare”) ([link](https://ckan.tirana.al/dataset/institucionet-arsimore/resource/ff4e6d4b-c812-443d-8222-122c2da7b51e), licensed with a Creative Commons Attribution license). Here is a visualization of school density in each of Tirana’s administrative areas:
 
-![School Density in each of Tirana’s Areas (image by author)](/images/school.png)]
+![School Density in each of Tirana’s Areas (image by author)](/images/school.png)
 
 
 And here is the same visualization, only focusing on the 11 urban areas:
 
 
-![School density focused on 11 of Tirana’s urban areas (image by author)](/images/schu.png)]
+![School density focused on 11 of Tirana’s urban areas (image by author)](/images/schu.png)
 
 
 At a glance, it seems that the areas with the highest density are in fact those outside of the 11 main admin areas. Namely, places like Shengjergj, Zall Bastar and Peze turn out to be the top 3. What does this mean for the kids who attend these schools? Is it necessarily easier for them to go to school safely or reliably?
@@ -135,7 +135,7 @@ To measure inequalities in the spatial distribution, there’s a few other metri
 
 PySAL also gives us two ways of visualizing autocorrelation: **Moran’s plot** and the **distribution** of **Moran’s I** under the null hypothesis:
 
-![Moran Plot + Empirical Distribution (image by author)](/images/minq.png)]
+![Moran Plot + Empirical Distribution (image by author)](/images/minq.png)
 
 
 Moran’s plot shows the **# of schools** plotted agains a **lagged # of schools** (obtained by multiplying the number of schools and a spatial weights matrix)**.** Qualitatively, we interpret the plot as showing positive spatial autocorrelation when the data points exhibit a high correlation. The distribution, on the other hand, is an empirical one: it is obtained by simulating a series of maps with randomly distributed schools counts and then calculating Moran’s I for each of them. (blue line: mean of distribution, red line: observed statistic in Tirana’s data)
