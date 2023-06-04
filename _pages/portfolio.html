@@ -13,3 +13,7 @@ author_profile: true
 {% endfor %}
 
 <h1>Data Stories</h1>>
+
+{% for post in site.data-stories %}
+  {% include archive-single.html %}
+{% endfor %}
