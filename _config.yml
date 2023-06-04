@@ -236,12 +236,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
+  # _data-stories
   - scope:
       path: ""
-      type: talks
+      type: ata-stories
     values:
-      layout: talk
+      layout: portfolio
       author_profile: true
       share: true
 
