@@ -1,6 +1,6 @@
 ---
 title: "Music Analyzer: exploring Spotify Songs & Building a Popularity Predictor"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/tiranares.jpg'>"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/spot.png'>"
 collection: portfolio
 ---
 
