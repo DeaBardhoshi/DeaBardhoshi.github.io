@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Dea Bardhoshi"
   avatar           : "Dea_Bardhoshi.jpeg"
-  bio              : "Data Scientist (Cal '23')"
+  bio              : "Data Scientist (UC Berkeley '23)"
   location         : "San Francisco Bay Area"
   employer         :
   pubmed           :
@@ -239,7 +239,7 @@ defaults:
   # _data-stories
   - scope:
       path: ""
-      type: ata-stories
+      type: data-stories
     values:
       layout: portfolio
       author_profile: true
