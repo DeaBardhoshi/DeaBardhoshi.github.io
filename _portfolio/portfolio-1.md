@@ -1,6 +1,6 @@
 ---
 title: "Tirana Street Names: a dive"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/tirana.jpg' width="500" height="400">"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/tirana.jpg'>"
 collection: portfolio
 ---
 
