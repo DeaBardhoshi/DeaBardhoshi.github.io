@@ -21,9 +21,7 @@ For this story I’ll use population count data from the City of Tirana Open Dat
 
 Urban planners have tried to capture the idea of a resilient city by looking at urban form. One major instance of this is **scale hierarchy** or **power laws**. A power law is a relationship between x and y that can be modeled using this formula and shape:
 
-!https://miro.medium.com/v2/resize:fit:724/1*S_swx0IzQqim5BVPfwHxDw.png
-
-Power Law Distribution (Image by Author)
+![Image by Author](/images/powerlaw.jpeg)
 
 It turns out a lot of relationships can be described using power laws: frequencies of last names (a few names are very popular so they show up with really high frequency), energy consumption (a few geographical areas consume the majority of the energy). In urban planning in particular, scale hierarchy/power laws turn up in the [distribution of subway stations, residential densities, and even job counts](https://www.tandfonline.com/doi/full/10.1080/19463138.2016.1277227).
 
@@ -31,25 +29,23 @@ It turns out a lot of relationships can be described using power laws: frequenci
 
 Let’s take a look at Tirana’s population distribution over data for 3 years: 2009, 2015, and 2021:
 
-!https://miro.medium.com/v2/resize:fit:802/1*YMxTgmUcfefpReX7Q2BHnA.png
+![Population Counts and Ranked Admin Areas (image by author)](/images/popc.png)
 
-Population Counts and Ranked Admin Areas (image by author)
 
 It seems these counts deviate slightly from a power law, at least qualitatively. There also are more tests to conduct to test for a power law, such as the Kolmogorov-Smirnov. However we would need to make a series of assumptions to actually carry those out (like the values being independent of each-other). For now, let’s take a closer look at some of these neighborhoods.
 
 What might be some of the reasons behind some of the deviations? There can be many: sudden growth of certain areas, outward migration, movement within neighborhoods etc. Here is a map of the populations for each of Tirana’s 24 areas across the years 2009–2020:
 
-!https://miro.medium.com/v2/resize:fit:1400/1*fhGa0OZ7mhRI_4wZ5ZVwvg.png
+![Tirana’s Population Through the Years (image by author)](/images/popc.png)
 
-Tirana’s Population Through the Years (image by author)
 
 Note the gradual increases in periurban areas: during the period after the fall of Communism, a lot of people moved into the areas bordering Tirana, often building their homes in the old expropriated land, eventually becoming a key part of the economical life of Tirana (more on this [here](https://www.sciencedirect.com/science/article/pii/S0264275110000284?casa_token=8lBKyEKWqaEAAAAA:gIFJ3wzU1wzQ15cxS2HQsol7pzA_eysVUJ7t69DXjWniSxXLTM1OyfojANRnMOjMNYKtSh9WftrR)).
 
 How about the core 11 areas that make up urban Tirana? Here is the filtered out map:
 
-!https://miro.medium.com/v2/resize:fit:1400/1*b8j6DtlkIbnArWf1h7elPw.png
+![Urban Tirana Through the Years (image by author)](/images/urban.png)
 
-Urban Tirana Through the Years (image by author)
+
 
 ## **Spatial Markov Movels**
 
@@ -61,9 +57,9 @@ At each moment, we can be in any of these 4 states, and the chance we are in **
 
 In this particular case study, however, it is very likely that our areas exhibit a degree of spatial dependence. For instance, if one area is very densely populated, it’s likely that the areas around it are also densely populated. To account for this, we focus on **Spatial Markov Models.** These models require that we compute a weight matrix **W** that describes this spatial dependence. First, though, let’s use Moran’s I to check if the neighborhoods are indeed spatially dependent:
 
-!https://miro.medium.com/v2/resize:fit:1206/1*ppdmDhr4wg-UiVx58LTqgA.png
+![Moran’s I (image by author)](/images/moran.png)]
 
-Moran’s I (image by author)
+
 
 Moran’s I checks **global spatial autocorrelation**: we expect similar valued areas to be close together, and different valued areas to be far apart. In its essence, it is a metric used to measure the spatial dependence we need to consider. As you can see in the plot above, Tirana’s administrative areas and their population counts exhibit a strong degree of spatial autocorrelation, above both the upper and the lower interval bounds.
 
@@ -75,9 +71,7 @@ The W matrix is 22 by 22 matrix, with 1s for each value (i, j) where the ith row
 
 Note that we will obtain 4 separate matrices: one for each bin a polygon’s neighbor can be in. Here is a look at the results:
 
-!https://miro.medium.com/v2/resize:fit:1400/1*wSEpfVMHBVrqLQClRb4Ssg.png
-
-Spatial Markov Model Matrices (image by author)
+![Spatial Markov Model Matrices (image by author)](/images/spatialm.png)]
 
 There are some interesting patterns:
 
@@ -86,30 +80,20 @@ There are some interesting patterns:
 
 You can draw similar conclusions using the rest of the values. Importantly, each area is most likely to stay in the same bin rather than switch. This also makes logical sense: in the relative short-term a place likely retains its present character, rather than undergoing drastic changes.
 
-## **Next Steps + the Code**
+## **Implications**
 
-Why are these results useful? As we saw, looking at sustainable growth and decline is an important part of a city’s resilience. These tools, including measuring power law fits or Spatial Markov Models allow us to understand these dynamics more precisely. In this story, I went through how to use some of these methods, and looked at some interesting results including which areas are expected to grow versus decline given previous years’ data.
-
-Next time, I’ll be looking at urban design more in detail. In the meantime, here is the [code notebook](https://github.com/DeaBardhoshi/AlbaniaExplorations/blob/main/Tirana.ipynb) for this story. Thanks for reading!
-
-
-Hello!
-
-This is part 2 of the urban resilience project ([part 1 here](https://towardsdatascience.com/urban-resilience-tirana-a-case-study-part-1-852bbfc8601)) focusing on demographic trends in Tirana! In the first part, we looked at power law distributions and built spatial markov models to understand population changes over time. In this second part, I wanted to delve a bit deeper into these predictions and look at what they mean for specific neighborhoods in Tirana. Let’s get started!
-
-# **Spatial Markov Models (cont.)**
-
-Last time, I used Tirana Open Data demographics information ([data](https://ckan.tirana.al/dataset/popullsia-sipas-viteve-dhe-nja-2009-2022) license: [Creative Commons Attribution](http://www.opendefinition.org/licenses/cc-by)) to obtain this spatial Markov model matrix:
-
-!https://miro.medium.com/v2/resize:fit:1400/1*pzkF279L3Wdzhzn0TKWhmw.png
-
-Spatial Markov Matrix Results (Image by Author)
+Why are these results useful? As we saw, looking at sustainable growth and decline is an important part of a city’s resilience. These tools, including measuring power law fits or Spatial Markov Models allow us to understand these dynamics more precisely. 
+I wanted to delve a bit deeper into these predictions and look at what they mean for specific neighborhoods in Tirana. Let’s get started!
 
 Let’s take a look at what these results entail in the context of specific neighborhoods. As of 2021, the most populated areas of the city are Area 5, 2, 7, 4 and 11 followed closely by Kashar, a municipality outside of the bounds of Tirana proper with many new developments. Here is a quick visualization:
+
+<iframe title="Admin Areas By Population (Top 6)" aria-label="Map" id="datawrapper-chart-VAWKh" src="https://datawrapper.dwcdn.net/VAWKh/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="379" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
 
 Kashar is an interesting example of periurban growth with companies like Coca-Cola, Vodafone, Top Channel and smaller businesses setting up shop there. In 2009, its population was just 20829 but as of 2021, it has almost tripled to 58664 people. These areas of very rapid growth are also some with the highest need for sustainable solutions: Kashar grows with about 11 new people a day and has a relatively young median age of 33 ([source](https://siu.scan-tv.com/40-fakte-rreth-periferise-se-tiranes-farka-kashari-dhe-dajti-nga-popullsia-biznesi-deri-tek-atraksionet-turistike/)).
 
 The other highest population areas have seen their own growth in the past 12 years:
+
+<iframe title="Top 5 Admin Areas Population Growth" aria-label="Interactive line chart" id="datawrapper-chart-vwGYo" src="https://datawrapper.dwcdn.net/vwGYo/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="384" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
 
 Its interesting that these areas are neighboring each other: this enforces the intuition that the trends happening in places around a neighborhood likely influence the character of that neighborhood as well.
 
@@ -125,23 +109,21 @@ When it comes to resilient development, cities should work towards providing hig
 
 In this context, I want to explore the distribution of schools as a marker of spatial equity. Are all children throughout Tirana served with accessible, high-quality schools? Are there areas that are disadvantaged? What are some school trends and patterns? For this, I’ll be using data for Tirana’s middle and primary schools (together known as “9-vjecare”) ([link](https://ckan.tirana.al/dataset/institucionet-arsimore/resource/ff4e6d4b-c812-443d-8222-122c2da7b51e), licensed with a Creative Commons Attribution license). Here is a visualization of school density in each of Tirana’s administrative areas:
 
-!https://miro.medium.com/v2/resize:fit:1350/1*59kzwOe2VtsWE10EleSj8w.png
+![School Density in each of Tirana’s Areas (image by author)](/images/school.png)]
 
-School Density in each of Tirana’s Areas (image by author)
 
 And here is the same visualization, only focusing on the 11 urban areas:
 
-!https://miro.medium.com/v2/resize:fit:1392/1*06S5G0VI7Zx9MT2zp0cytw.png
 
-School density focused on 11 of Tirana’s urban areas (image by author)
+![School density focused on 11 of Tirana’s urban areas (image by author)](/images/schu.png)]
+
 
 At a glance, it seems that the areas with the highest density are in fact those outside of the 11 main admin areas. Namely, places like Shengjergj, Zall Bastar and Peze turn out to be the top 3. What does this mean for the kids who attend these schools? Is it necessarily easier for them to go to school safely or reliably?
 
 Here is a street network visualization for walking from one of Kashar’s schools, “Sadik Stavileci”. The graph shows isochrones for how far you can travel from the school if walking in 5, 10 or 15 minutes (assuming a speed of 4.5 kilometers/hour).
 
-!https://miro.medium.com/v2/resize:fit:890/1*FFLSUQTaUuV6hJQujLjhBw.png
+![Isochrones Map for Walking Distance from Kashar School (image by author)](/images/netw.png)]
 
-Isochrones Map for Walking Distance from Kashar School (image by author)
 
 As you can see, the distance kids can cover in a few minutes is probably not that great. This tool, however, is useful when planning out building projects so that a place is easily accessible by the people meant to use it. What is a reasonable time to walk to and from school? How do we improve services like transit or biking so that children are able to go to their schools safely? As a starting point on these, it would be interesting to calculate isochrones for all of Tirana’s schools and compare them to how many children would be within walking distance.
 
@@ -153,14 +135,13 @@ To measure inequalities in the spatial distribution, there’s a few other metri
 
 PySAL also gives us two ways of visualizing autocorrelation: **Moran’s plot** and the **distribution** of **Moran’s I** under the null hypothesis:
 
-!https://miro.medium.com/v2/resize:fit:1244/1*AZewZ57YIj92B5JXHSkXeg.png
+![Moran Plot + Empirical Distribution (image by author)](/images/minq.png)]
 
-Moran Plot + Empirical Distribution (image by author)
 
 Moran’s plot shows the **# of schools** plotted agains a **lagged # of schools** (obtained by multiplying the number of schools and a spatial weights matrix)**.** Qualitatively, we interpret the plot as showing positive spatial autocorrelation when the data points exhibit a high correlation. The distribution, on the other hand, is an empirical one: it is obtained by simulating a series of maps with randomly distributed schools counts and then calculating Moran’s I for each of them. (blue line: mean of distribution, red line: observed statistic in Tirana’s data)
 
 ## **📔 Conclusions + Notebook**
 
-This concludes part 2 of this project! Overall, I believe using spatial data science tools is something relatively unexplored, especially in the Albanian context, but definitely very useful. This project could be enriched with more fine-grained data (as in the schools example). Until then, here is the updated [notebook](https://github.com/DeaBardhoshi/AlbaniaExplorations).
+This concludes this project! Overall, I believe using spatial data science tools is something relatively unexplored, especially in the Albanian context, but definitely very useful. This project could be enriched with more fine-grained data (as in the schools example). Until then, here is the updated [notebook](https://github.com/DeaBardhoshi/AlbaniaExplorations).
 
 Thanks for reading!
