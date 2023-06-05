@@ -1,6 +1,6 @@
 ---
 title: "Tirana Street Names: a dive"
-excerpt: "Analysing Tirana's Streets <br> <img src='/images/tirana.jpg'>"
+excerpt: "Analysing Tirana's Streets <br></br>  <br></br> <img src='/images/tirana.jpg'>"
 collection: portfolio
 ---
 

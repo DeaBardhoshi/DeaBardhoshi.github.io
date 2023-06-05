@@ -1,6 +1,6 @@
 ---
 title: "Music Analyzer: exploring Spotify Songs & Building a Popularity Predictor"
-excerpt: "What features do Spotify top tracks have? <br/><img src='/images/spot.png'>"
+excerpt: "What features do Spotify top tracks have? <br></br> <br></br> <img src='/images/spot.png' style='width:500px;height:600px;'>"
 collection: portfolio
 ---
 
