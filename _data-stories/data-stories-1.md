@@ -5,5 +5,4 @@ collection: data-stories
 ---
 
 
-Hello!
 
