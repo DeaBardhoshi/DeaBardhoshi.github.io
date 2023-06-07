@@ -128,8 +128,75 @@ Now that we have these metrics for every song, we can visualize them using a box
 
 As you can see, singular nouns make up a large portion of the lyrics, followed by verbs and regular adverbs. Comparative and superlative adverbs on the other hand don’t show up very often in the lyrics.
 
+## **7 Building a Regression Model
+
+Lastly, I wanted to use these findings to construct a model that predicts a song’s popularity given its features. As a start, I am using a linear regression model of a few of Spotify’s internal features as predictors for popularity. Here is a test of the linear relationship of these features:
+
+![Danceability](/images/scattermusic.png)
+![Valence](/images/scattermusic2.png)
+![Energy](/images/scattermusic3.png)
+![Loudness](/images/scattermusic4.png)
+
+**The features I am using are:** 
+
+- 'duration_ms', 'danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', ‘acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo'.
+
+First, I needed to check the normality in the features:
+
+![Checking for Normality](/images/distmusic.png)
+
+In order to make the data fit a normal distribution, I take the log-transformed features which to approximate a normal distribution, especially the "duration" and to some extent the "loudness". Let's remove some outliers from the data, so that we can bring the others to fit a normal distribution as well. We will do this for the danceability and the speechiness columns.
+
+![Log-transformed Speech](/images/disttrmusic.png)
+![Log-transformed Valence](/images/disttrmusic2.png)
+![Log-transformed Loudness](/images/disttrmusic3.png)
+
+I am also checking multicollinearity between the features:
+
+![Multicollinearity Checking](/images/multimusic.png)
+
+The collinearity between them appears to be relatively small (-0.2 to 0.2). Now, we can fit the model. Here is a plot of the fit, along with metrics like MSE and R squared:
+
+![Predicted vs. Actual Popularity](/images/predmusic.png)
+- MSE: 266.64483397101714
+- MAE: 12.40898957243052
+- R squared:0.340880153380248
+
+Given these preliminary results, I also wanted to perform feature engineering on the data and specifically on “publication date”. As we examined in the first part of this project, we have some data relating to the publication year. In the plot below, we can see that an increasing year generally leads to an increase in popularity, so we can work that into our model as well:
+
+![Year vs Popularity](/images/yearmusic.png)
+
+Now, let's try to add some more features to the model. One feature we looked at was song similarity, i.e. how similar a song was to the others, and we visualized them using networkx. We can create a metric to measure this, and add it to our model and fit it again:
+
+![Predicted vs. Actual Popularity (with feature engineering)](/images/pred2music.png)
+
+- MSE: 145.900482529075
+- R squared: 0.639348333758589
+
+Interestingly, now that we fit a couple more features, the mean squared error fell dramatically, and the r2 also rose by a great amount, which is a great improvement over our initial model.
+
+**Fitting a Non-Parametric Model: KNN Regression**
+
+In addition to the parametric method we just fitted to our data, we can also attempt to fit a non-parametric model, starting with KNN Regression:
+
+
+![KNN Regression Fitted Model](/images/knnmusic.png)
+
+- MSE: 85.89374999999998
+- R squared: 0.7876790842617676
+
+So we can see that our mean squared error went down, compared to the linear model and the r2 score went up. Both of these are improvements, so let's try cross-validation on this model and see how it performs.
+
+**Cross-Validation**
+
+
+![Cross-Validation and MSE](/images/knnmsemusic.png)
+![Cross-Validation and R squared](/images/knnrmusic.png)
+
+5-6 folds appears to give us the best MSE and R squared scores.
+
 ## **Conclusion**
 
-To sum up our findings, we discovered that there are quite some differences between the most popular songs compared to the rest of the songs, as well as between different eras. We also build graphs to look at which songs are more similar to the others, and looked at text analysis techniques for looking at their lyrics. Here is the code for you to look at more closely: https://github.com/DeaBardhoshi/Data-Science-Projects/blob/main/Music%20System.ipynb
+To sum up our findings, we discovered that there are quite some differences between the most popular songs compared to the rest of the songs, as well as between different eras. We also build graphs to look at which songs are more similar to the others, and looked at text analysis techniques for looking at their lyrics. Lastly, we used these findings to build regression models to predict the popularity each song will have. Here is the code for you to look at more closely: [https://github.com/DeaBardhoshi/Data-Science-Projects/blob/main/Music%20System.ipynb](https://github.com/DeaBardhoshi/Data-Science-Projects/blob/main/Music%20System.ipynb) and [https://github.com/DeaBardhoshi/modeling-analysing-songs/blob/main/Music System (1).ipynb](https://github.com/DeaBardhoshi/modeling-analysing-songs/blob/main/Music%20System%20(1).ipynb)
 
 I hope you enjoyed this article and thanks for reading!
