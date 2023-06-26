@@ -4,4 +4,39 @@ excerpt: "Short description of portfolio item number 2 <br/><img src='/images/50
 collection: portfolio
 ---
 
-HTML parsed
+
+  <body>
+
+
+    <svg width="960" height="500"></svg>
+    <script>
+      const { range, timer } = d3;
+      const { sin } = Math;
+      const n = 30;
+
+      const svg = d3.select('svg');
+      const w = svg.attr('width');
+      const h = svg.attr('height');
+      const frequency = 0.3;
+
+      const radius = w / n / 2;
+
+      const x = (d) => ((d + 0.5) * w) / n;
+      const y = (t) => (d) =>
+        (sin(d *frequency + t / 1000) * h * 1.5) / 4 + h / 2;
+
+      svg
+        .selectAll('circle')
+        .data(range(n))
+        .enter()
+        .append('circle')
+        .attr('cx', x)
+        .attr('r', radius)
+        .call((selection) => {
+          timer((time) => {
+            selection.attr('cy', y(time));
+          });
+        });
+    </script>
+
+  </body>
