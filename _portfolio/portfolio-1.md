@@ -1,6 +1,6 @@
 ---
 title: "StreetMaps"
-excerpt: "Uncovering the stories behind Tirana’s street names"
+excerpt: "Street names in Tirana: collective values, memory and representation <br>  <br> <img src='/images/tirana.jpg' style='width:700px;height:400px;' >"
 collection: portfolio
 ---
 
