@@ -1,6 +1,6 @@
 ---
-title: "Tirana Street Names: a dive"
-excerpt: "Analysing Tirana's Streets <br>  <br> <img src='/images/tirana.jpg' style='width:800px;height:500px;' >"
+title: "StreetMaps"
+excerpt: "Uncovering the stories behind Tirana’s street names"
 collection: portfolio
 ---
 
