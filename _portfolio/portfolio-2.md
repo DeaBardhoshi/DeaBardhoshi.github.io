@@ -1,6 +1,6 @@
 ---
 title: "Urban Resilience: Population Dynamics, Scale Laws and Spatial Equity"
-excerpt: "What makes a city resilient? <br> <br><img src='/images/tiranares.jpg' style='width:800px;height:500px;'>"
+excerpt: "What makes a city resilient? <br> <br><img src='/images/tiranares.jpg' style='width:700px;height:400px;'>"
 collection: portfolio
 ---
 
