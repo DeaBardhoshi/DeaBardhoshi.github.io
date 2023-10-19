@@ -14,7 +14,7 @@ I'm Dea, a UC Berkeley Data Science graduate ('23) interested in how data, urban
 
 ## 🔭 I’m currently working on ...
 
-I am a Data Analyst for the Massachusetts Department of Transportation in the Office of Planning, Management and Innovation.
+I am a Data Analyst for the Massachusetts Department of Transportation in the Office of Performance Management and Innovation.
 
 ## 📚 Previously ...
 
