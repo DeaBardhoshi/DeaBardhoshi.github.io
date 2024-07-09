@@ -19,9 +19,7 @@ experience. Such music is often composed ambiently, using its layered tones to s
 
 And then Brian Eno made an entire album of them: ‘**Ambient 1: Music for Airports**’. The songs in it are inspired by the music often found in waiting spaces, like a hospital, bank or airport terminal. They have a faux-soothing quality: they are meant to be interrupted and not be reflected upon. But they have a certain elegance to their bareness as well. There is no sense of movement, but the few repeating building blocks still create a satisfying musical experience. In a way, they  reflect the fleetingness of airport travel.
 
-This sense of sensory enhancement is also why Barilla puts out playlists to go with its pasta recipes. Such as these rigatonis and bucatinis:
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/55maOOKGYP3yXtR5x6bZ6t?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+This sense of sensory enhancement is also why Barilla puts out playlists to go with its pasta recipes. Such as these [rigatonis and bucatinis](https://open.spotify.com/playlist/55maOOKGYP3yXtR5x6bZ6t?si=e3dee73158a142a3).
 
 Every flavor in its own way corresponds to a set of sounds which engage multiple senses at the same time. The composer [Cristobal Tapia de Veer](https://albronzosoundtrack.com/over) uses pitches and tempos from multiple instruments to make each song fit a dish. Using tomatoes as sweet bells, bacon as bass lines: making music from pasta, who would have thought?
 
