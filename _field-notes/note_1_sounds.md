@@ -2,6 +2,7 @@
 title: 'Sounds'
 date: 2024-07-08
 permalink: /posts/2024/07/sounds/
+layout: archive
 tags:
   - cool posts
 ---
