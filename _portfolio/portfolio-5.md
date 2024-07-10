@@ -1,6 +1,6 @@
 ---
 title: "The Map of Tiny Perfect Things"
-excerpt: "<br>  <br> <img src='/images/mptp.jpg' style='width:500px;height:300px;' >"
+excerpt: "<br>  <br> <img src='/images/mptp.png' style='width:500px;height:300px;' >"
 collection: portfolio
 ---
 
