@@ -24,4 +24,4 @@ This sense of sensory enhancement is also why Barilla puts out playlists to go w
 
 Every flavor in its own way corresponds to a set of sounds which engage multiple senses at the same time. The composer [Cristobal Tapia de Veer](https://albronzosoundtrack.com/over) uses pitches and tempos from multiple instruments to make each song fit a dish. Using tomatoes as sweet bells, bacon as bass lines: making music from pasta, who would have thought?
 
-![an espresso](/images/espresso.png)
+![an espresso!](/images/espresso.png)
