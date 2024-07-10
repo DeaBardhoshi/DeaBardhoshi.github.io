@@ -15,8 +15,6 @@ At these venues, the melody is placed front and center. But, often music is comp
 more practical purposes. Think about the music that is played at coffee shops. How often do you
 hear fast tempos and energetic lyrics? Music that is faster induces feelings of adrenaline, making you all hyped up. Calmer music might want to make you pause and take in the moment. What’s more, the kind of music playing at a coffee shop even changes a coffee’s taste! [**Sweet music diminishes the bitter notes in a cup**](https://www.sciencedirect.com/science/article/abs/pii/S0963996921006955#:~:text=Musical) fragments changed coffee's temporal,perception of bitter in coffee,  a result from the budding field of sonic seasoning research.
 
-![an espresso!](espresso.png)
-
 
 The use of music in food venues is an example of songs used to complement a meal’s or drink’s
 experience. Such music is often composed ambiently, using its layered tones to sound unobtrusive. It is meant to evoke atmospheres and be listened passively, while you are doing something else. Erik Satie composed some famous ambient songs that he called ‘**furniture music’,** such as [‘Gymnopedie No. 1’](https://www.youtube.com/watch?v=S-Xm7s9eGxU).
