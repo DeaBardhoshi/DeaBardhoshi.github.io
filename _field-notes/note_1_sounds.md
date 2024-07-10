@@ -15,6 +15,8 @@ At these venues, the melody is placed front and center. But, often music is comp
 more practical purposes. Think about the music that is played at coffee shops. How often do you
 hear fast tempos and energetic lyrics? Music that is faster induces feelings of adrenaline, making you all hyped up. Calmer music might want to make you pause and take in the moment. What’s more, the kind of music playing at a coffee shop even changes a coffee’s taste! [**Sweet music diminishes the bitter notes in a cup**](https://www.sciencedirect.com/science/article/abs/pii/S0963996921006955#:~:text=Musical) fragments changed coffee's temporal,perception of bitter in coffee,  a result from the budding field of sonic seasoning research.
 
+![an espresso!](/images/espresso.png)
+
 The use of music in food venues is an example of songs used to complement a meal’s or drink’s
 experience. Such music is often composed ambiently, using its layered tones to sound unobtrusive. It is meant to evoke atmospheres and be listened passively, while you are doing something else. Erik Satie composed some famous ambient songs that he called ‘**furniture music’,** such as [‘Gymnopedie No. 1’](https://www.youtube.com/watch?v=S-Xm7s9eGxU).
 
@@ -24,4 +26,3 @@ This sense of sensory enhancement is also why Barilla puts out playlists to go w
 
 Every flavor in its own way corresponds to a set of sounds which engage multiple senses at the same time. The composer [Cristobal Tapia de Veer](https://albronzosoundtrack.com/over) uses pitches and tempos from multiple instruments to make each song fit a dish. Using tomatoes as sweet bells, bacon as bass lines: making music from pasta, who would have thought?
 
-![an espresso!](/images/espresso.png)
