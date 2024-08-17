@@ -16,7 +16,7 @@ I've been listening to classical music all of my life, mostly as a result of lea
 
 ### **Accompanied Violin**
 First off, some orchestral and accompanied violin pieces:
-    - Jean Sibelius - ![Violin Concerto in D Major][https://www.youtube.com/watch?v=J0w0t4Qn6LY&t=1845s]
+    - Jean Sibelius - [Violin Concerto in D Major](https://www.youtube.com/watch?v=J0w0t4Qn6LY&t=1845s)
         - Perhaps my absolute favorite violin composition ever, along with Bach solo works. In my opinion, this piece is the essence of Sibelius: dominated by a sense darkness (like in the cadenza) but also punctuated by moments of hope and joy (in the 3rd movement, which I think is one of the best out there). The result is endlessly complex, both emotionally and compositionally.
     - Johannes Brahms - [Violin Concerto in D Major][https://www.youtube.com/watch?v=7C_U7eUbVd8]
         - When it comes to this concerto, I always imagine a fire: sometimes contained, other times bursting from the instrument. Bonus points for a wonderful final movement, inspired by Hungarian melodies.
