@@ -1,5 +1,5 @@
 ---
-title: 'Some classical recs'
+title: 'A music questionnaire'
 date: 2025-01-12
 permalink: /posts/2025/01/music/
 layout: archive
