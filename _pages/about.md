@@ -12,10 +12,6 @@ redirect_from:
 
 I'm Dea, a UC Berkeley Data Science graduate ('23) interested in how data, urban planning and computational social science can come together. I love reading, cycling, playing tennis and exploring obscure coffee shops in cities I visit.
 
-## 🔭 I’m currently working on ...
-
-I am a Data Analyst for the Massachusetts Department of Transportation in the Office of Performance Management and Innovation.
-
 ## 📚 Previously ...
 
 After finishing my data science degree (with a concentration in Geospatial Information and Technology), I chose to pursue a career in civic technology, working closely in my two fields of expertise. Most recently, I was a Data Engineering Fellow for NYC Department of City Planning where I worked on building a brand-new data product to map the city’s historical spending. This work aims at providing a data-driven analytical tool to understand spatial and temporal investment patterns and to inform future investment plans. At Berkeley, I was involved in teaching in data science classes as well as developing Human Context and Ethics Curriculum.
