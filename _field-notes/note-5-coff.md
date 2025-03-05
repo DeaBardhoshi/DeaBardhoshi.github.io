@@ -36,7 +36,7 @@ For the purposes of this blog, I’ve recently used beans from the following roa
 - **‘Kubrick’ from Wimp Decaf**
     - **notes**: pomelo, pineapple, black tea
 - ‘**Slow Motion’ from Counter Culture**
-    - **notes**: molasses | cocoa | smooth (uses Swiss Water Process)
+    - **notes**: molasses, cocoa, smooth (uses Swiss Water Process)
 - **‘Decaf Colombia Huila EA’ from Klatch Coffee**
     - **notes**: stone fruit - semi-sweet chocolate - malt (EA process)
 - **‘CO2 Decaf Colombian’ from Coffee Bean Direct**
